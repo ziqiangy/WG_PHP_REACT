@@ -12,7 +12,7 @@ class FetchTimeClockTable extends React.Component {
         }
     }
     componentDidMount(){
-        fetch("../php-api/timeClockPagination.php", this.state.requestOptions)
+        fetch("../php/timeClockPagination.php", this.state.requestOptions)
             .then(response => response.json())
             .then(result => {
                 console.log(result[0].data_time_clock)

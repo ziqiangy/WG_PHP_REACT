@@ -1,0 +1,55 @@
+/* updated style for report */
+/*sidebarstyle*/
+#sidebar{
+    height: 100%;
+    width:200px;
+    background-color: #0c404d;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    z-index: 9999;
+    transition: all 0.4s;
+
+    margin-left:-200px;
+
+}
+
+#sidebar.active{
+    margin-left:0;
+}
+
+#content{
+    margin-left: 0;
+}
+#content.active{
+    margin-left: 200px;
+}
+@media (max-width:768px){
+    #sidebar{
+        margin-left:-200px;
+    }
+    #sidebar.active{
+        margin-left:0;
+    }
+    #content{
+        margin-left: 0;
+    }
+    #content.active{
+        margin-left: 200px;
+    }
+}
+
+
+/*navbarstyle*/
+.nav{
+    background-color: #f5f6f8;
+    border-bottom: 2px solid black;
+    height:40px;
+}
+#mainPage{
+    height:calc(100vh - 40px);
+    overflow:hidden;
+    padding:0;
+}

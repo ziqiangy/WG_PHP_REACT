@@ -1,0 +1,132 @@
+/*Prevent horizontal bar show when overflow*/
+html{overflow: auto; overflow-x:hidden}
+
+#sidebar{
+    height: 100%;
+    width:200px;
+    background-color: #0c404d;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    z-index: 9999;
+    transition: all 0.4s;
+
+}
+
+#sidebar.active{
+    margin-left:-200px;
+}
+
+#content{
+    margin-left: 200px;
+}
+#content.active{
+    margin-left: 0;
+}
+
+@media (max-width:768px){
+    #sidebar{
+        margin-left:-200px;
+    }
+    #sidebar.active{
+        margin-left:0;
+    }
+    #content{
+        margin-left: 0;
+    }
+    #content.active{
+        margin-left: 200px;
+    }
+}
+
+/*workglue logo navbar-head*/
+#headerLogo {
+    width:100%;
+}
+
+/*Define size of sidebar icons*/
+#sidebar li a>img{
+    height: 25px;
+    width: 25px;
+    margin-bottom: 7px;
+}
+#sidebar ul{
+    padding-left:0;
+}
+
+#sidebar ul>li {
+    list-style-type: none;
+}
+
+/*Define submenu item styles*/
+.navbar-nav ul a{
+    color:#DFDFDF;
+    margin-left:50px;
+}
+.navbar-nav a:hover{
+    color:#1fb9e3;
+    text-decoration:none;
+}
+#sidebar span{
+    margin-left: 15px;
+    font-size:1.1em;
+}
+
+/*navbar box shadow*/
+#content .navbar{
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+/*Define navbar font color and style*/
+#showCalendar, #tawkstatus{
+    color:#0c404d;
+    font-weight: bold;
+}
+/*Define navbar font color and style*/
+nav #reminderbutton, nav #wnbutton, nav #showCalendar svg{
+    color:#EE7600;
+    font-weight: bold;
+}
+nav #showCalendar svg{
+    margin-left:10px;
+}
+.form-control::placeholder{
+    color: black;
+}
+/*format for calendar pop-up style*/
+#navCalDiv {
+    font-size: .8em;
+    text-align: center;
+}
+
+#mainPage{
+
+    background-color: #f5f6f8;
+    padding:20px;
+}
+
+a{
+    color:#EE7600;
+    font-weight: 600;
+}
+
+.navbartoggleicon{
+    background: none !important;
+    color: black !important;
+    border: none !important;
+    padding: 0 !important;
+    font: inherit !important;
+    cursor: pointer !important;
+    outline: inherit !important;
+}
+#sidebarCollapse{
+    padding: 6px 12px;
+    text-align: center;
+    cursor:pointer;
+}
+
+#header_search_query{
+    border-radius:100px;
+}
