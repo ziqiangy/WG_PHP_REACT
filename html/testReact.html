@@ -12,6 +12,7 @@
     <!--Peter's Personal CSS-->
     <link rel="stylesheet" href="../css/peter_workglue.css">
     <link rel="stylesheet" href="../css/peter_side_nav_update_report.css">
+    <link rel="stylesheet" href="../css/peter_report.css">
     <!--jQuery v1.12.4 | (c) jQuery Foundation | jquery.org/license-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
@@ -93,7 +94,7 @@
 <div id="content">
     <div class="nav">
         <span id="sidebarCollapse"><i class="fas fa-align-left"></i></span>
-        <span class="mr-5 ml-auto">
+        <!-- <span class="mr-5 ml-auto">
             <form method="post" name="header_search" action="/joblist.html">
                 <button class="btn" type="submit" name="header_search_submit">
                     <i class="fas fa-search"></i>
@@ -103,23 +104,62 @@
         </span>
         <span class="mr-5 my-auto"><a id="reminderbutton" href="#">Add a task</a></span>
         <span class="mr-5 my-auto"><a id="showCalendar" href="#">Date</a></span>
-        <span class="mr-5 my-auto"><a id="tawkstatus" href="#">Support</a></span>
+        <span class="mr-5 my-auto"><a id="tawkstatus" href="#">Support</a></span> -->
 
     </div>
     <!--MainPage Start-->
     <div id="mainPage">
-        <div id="table_container"></div>
-        <div id="pagination_container"></div>
-        
-        
+        <div class="search-report-section">
+            <div class="report-tab-section">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="ptr-tab" data-toggle="tab" href="#ptr" role="tab" aria-controls="home" aria-selected="true">Payroll Time Report</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="ptr" role="tabpanel" aria-labelledby="ptr-tab">
+                        <div class="search-section">
+                            <form class="d-inline" id="form-search" action="">
+                                <div class="form-row">
+                                    <div class="col-auto">
+                                        <label for="ptr_starting_date">Starting Date:</label>
+                                        <input type="text" class="form-control" name="ptr_starting_date" id="ptr_starting_date" value="">
+                                    </div>
+                                    <div class="col-auto">
+                                        <label for="ptr_ending_date">Ending Date:</label>
+                                        <input type="text" class="form-control" name="ptr_ending_date" id="ptr_ending_date" value="">
+                                    </div>
+                                    <div class="col-auto">
+                                        <label for="ptr_worker">Worker:</label>
+                                        <select class="form-control" name="ptr_worker" id="ptr_worker"></select>
+                                    </div>
+                                    <div class="col-auto">
+                                        <label for="ptr_job">Job:</label>
+                                        <select class="form-control" name="ptr_job" id="ptr_job"></select>
+                                    </div>
+                                    <div class="col-auto my-auto">
+                                        <button type="button" class="btn btn-outline-primary" onclick="submitDetailPayroll()">List</button>
+                                        <button type="button" class="btn btn-outline-primary" onclick="">Export</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="report-section">
+                            <div id="table_container"></div>
+                            <div id="pagination_container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!--Closing MainPage-->
     </div>
-
 <!--Closing Content:Navbar&Content-->
 </div>
 
 
 <script type="text/javascript" src="../js/peter_workglue.js"></script>
+<script type="text/javascript" src="../js/peter_report.js"></script>
 <!-- Load React. -->
 <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>

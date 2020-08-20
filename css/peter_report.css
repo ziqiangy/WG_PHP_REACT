@@ -1,0 +1,115 @@
+/*customized css for all icons*/
+input[type='radio'] {
+    -webkit-appearance:none;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    outline:none;
+    box-shadow:0 0 0 1px #ced4da inset;
+}
+input[type='radio']:hover {
+    box-shadow:0 0 0 1px #0c404d inset;
+}
+input[type='radio']:checked {
+    box-shadow:0 0 0 1px #0c404d inset;
+}
+input[type='radio']:before {
+    content:'';
+    display:block;
+    width:60%;
+    height:60%;
+    margin: 20% auto;
+    border-radius:50%;
+}
+input[type='radio']:checked:before {
+    background:#0c404d;
+}
+
+select:focus {
+    border-color: #0c404d;
+    box-shadow: 0 0 1px 3px #0c404d;
+    /*box-shadow: 0 0 0 3px -moz-mac-focusring;*/
+    color: #0c404d;
+    outline: none;
+}
+
+#mainPage .btn-outline-primary{
+    color: #0c404d;
+    font-weight: 700;
+    border: 1px solid #0c404d;
+}
+
+#mainPage .btn-outline-primary:hover{
+    color:white;
+    background-color: #0c404d;
+}
+
+
+.page-link{
+    color: #0c404d;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #0c404d;
+    border-color: #0c404d;
+}
+
+h2{
+    color:#0c404d;
+}
+
+.nav-tabs .nav-link.active{
+    color:#0c404d;
+    font-weight: bold;
+}
+/*for this page*/
+#mainPage{
+    height:calc(100vh - 56px);
+    overflow:hidden;
+    padding:0;
+}
+
+
+
+select {
+    -webkit-appearance: none;  /* for webkit (safari, chrome) compatibility */
+    -moz-appearance: none; /* for firefox compatibility */
+    appearance: none;
+}
+
+.search-report-section{
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow:auto;
+    height:calc(100% - 80px);
+    width:calc(100% - 40px);
+    margin:20px auto 0;
+    padding:20px 20px;
+}
+.search-section{
+    /*border:1px solid green;*/
+    /*height:calc(20% - 35px);*/
+
+}
+.report-section{
+    /*border:1px solid red;*/
+    height:calc(100% - 150px);
+}
+
+.table-report{
+    border: 1px solid #ced4da;
+    max-height:calc(100% - 75px);
+    overflow:auto;
+    position:relative;
+}
+
+table thead th{
+    position: sticky;
+    top:0;
+    background-color: white;
+}
+
+

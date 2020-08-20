@@ -43,7 +43,7 @@
 
 
 /*navbarstyle*/
-.nav{
+#content>.nav{
     background-color: #f5f6f8;
     border-bottom: 2px solid black;
     height:40px;
