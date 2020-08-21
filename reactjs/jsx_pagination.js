@@ -1,10 +1,19 @@
 class FetchTimeClockPagination extends React.Component{
     constructor(props){
         super(props);
+
+        let myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+        let urlencoded = new URLSearchParams();
+        urlencoded.append("pageAt", props.page);
+
         this.state = {
             data: [],
             requestOptions : {
                 method: 'POST',
+                headers: myHeaders,
+                body: urlencoded,
                 redirect: 'follow'
             }
         }
@@ -48,5 +57,5 @@ class PaginationElement extends React.Component {
 }
 
 
-ReactDOM.render(<FetchTimeClockPagination />, document.querySelector('#pagination_container'));
+ReactDOM.render(<FetchTimeClockPagination page={25} />, document.querySelector('#pagination_container'));
 

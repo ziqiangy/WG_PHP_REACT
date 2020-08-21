@@ -44,8 +44,10 @@ if ($where_time_clock) {
     }
 }
 
+if (isset($_POST["pageAt"]) && !empty($_POST["pageAt"])) {
+    $pageAt = $_POST["pageAt"];
+} else {$pageAt = 1;}
 
-$pageAt = 1;
 $limitPerPage = 10;
 
 
