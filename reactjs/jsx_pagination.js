@@ -36,6 +36,10 @@ class FetchTimeClockPagination extends React.Component{
     }
 }
 
+
+
+
+
 class Pagination extends React.Component {
     render(){
         return(
@@ -51,11 +55,27 @@ class Pagination extends React.Component {
 }
 
 class PaginationElement extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            page:this.props.name
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(data) {
+        console.log(data);
+
+    }
+
     render(){
-        return <li className="page-item"><a className="page-link" href="#">{this.props.name}</a></li>;
+        return <li className="page-item"><a className="page-link" href="#" onClick={(e)=>this.handleClick(this.state.page,e)}>{this.state.page}</a></li>;
     }
 }
 
+function clickFunc(data){
+    ReactDOM.render(<FetchTimeClockPagination page={data} />, document.querySelector('#pagination_container'));
+}
 
-ReactDOM.render(<FetchTimeClockPagination page={25} />, document.querySelector('#pagination_container'));
+ReactDOM.render(<FetchTimeClockPagination page={76} />, document.querySelector('#pagination_container'));
 
