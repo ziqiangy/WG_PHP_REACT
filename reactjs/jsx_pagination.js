@@ -60,16 +60,17 @@ class PaginationElement extends React.Component {
         this.state = {
             page:this.props.name
         }
-        this.handleClick = this.handleClick.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(data) {
-        console.log(data);
-
+        // console.log(data);
+        clickFunc(data)
+        // ReactDOM.render(<FetchTimeClockPagination page={data} />, document.querySelector('#pagination_container'));
     }
 
     render(){
-        return <li className="page-item"><a className="page-link" href="#" onClick={(e)=>this.handleClick(this.state.page,e)}>{this.state.page}</a></li>;
+        return <li className="page-item"><a className="page-link" href="#" onClick={()=>this.handleClick(this.state.page)}>{this.state.page}</a></li>;
     }
 }
 
