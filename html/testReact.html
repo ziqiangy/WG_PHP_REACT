@@ -119,30 +119,7 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="ptr" role="tabpanel" aria-labelledby="ptr-tab">
                         <div class="search-section">
-                            <form class="d-inline" id="form-search" action="">
-                                <div class="form-row">
-                                    <div class="col-auto">
-                                        <label for="ptr_starting_date">Starting Date:</label>
-                                        <input type="text" class="form-control" name="ptr_starting_date" id="ptr_starting_date" value="">
-                                    </div>
-                                    <div class="col-auto">
-                                        <label for="ptr_ending_date">Ending Date:</label>
-                                        <input type="text" class="form-control" name="ptr_ending_date" id="ptr_ending_date" value="">
-                                    </div>
-                                    <div class="col-auto">
-                                        <label for="ptr_worker">Worker:</label>
-                                        <select class="form-control" name="ptr_worker" id="ptr_worker"></select>
-                                    </div>
-                                    <div class="col-auto">
-                                        <label for="ptr_job">Job:</label>
-                                        <select class="form-control" name="ptr_job" id="ptr_job"></select>
-                                    </div>
-                                    <div class="col-auto my-auto">
-                                        <button type="button" class="btn btn-outline-primary" onclick="submitDetailPayroll()">List</button>
-                                        <button type="button" class="btn btn-outline-primary" onclick="">Export</button>
-                                    </div>
-                                </div>
-                            </form>
+                            <div id="formReact"></div>
                         </div>
                         <div class="report-section">
                             <div id="tablePagination"></div>
@@ -158,7 +135,7 @@
 
 
 <script type="text/javascript" src="../js/peter_workglue.js"></script>
-<script type="text/javascript" src="../js/peter_report.js"></script>
+
 <!-- Load React. -->
 <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -167,5 +144,8 @@
 
 <!-- Load our React component. -->
 <script type="text/babel" src="../reactjs/tablePagination.js"></script>
+<script type="text/babel" src="../reactjs/form.js"></script>
+<!--Load more JS-->
+<script type="text/javascript" src="../js/peter_report.js"></script>
 </body>
 </html>
