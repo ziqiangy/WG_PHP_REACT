@@ -12,7 +12,7 @@
     <!--Peter's Personal CSS-->
     <link rel="stylesheet" href="../css/peter_workglue.css">
     <link rel="stylesheet" href="../css/peter_side_nav_update_report.css">
-    <link rel="stylesheet" href="../css/peter_report.css">
+    <link rel="stylesheet" href="../css/peter_employee_time_add_react.css">
     <!--jQuery v1.12.4 | (c) jQuery Foundation | jquery.org/license-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
@@ -109,26 +109,11 @@
     </div>
     <!--MainPage Start-->
     <div id="mainPage">
-        <div class="search-report-section">
-            <div class="report-tab-section">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="ptr-tab" data-toggle="tab" href="#ptr" role="tab" aria-controls="home" aria-selected="true">Payroll Time Report</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="ptr" role="tabpanel" aria-labelledby="ptr-tab">
-                        <div class="search-section">
-                            <div id="formReact"></div>
-                            <div id="appDatePicker"></div>
-                        </div>
-                        <div class="report-section">
-                            <div id="tablePagination"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="card">
+            <h2>Employee Time Add</h2>
+            <div id="root"></div>
         </div>
+
     <!--Closing MainPage-->
     </div>
 <!--Closing Content:Navbar&Content-->
@@ -144,9 +129,8 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <!-- Load our React component. -->
-<script type="text/babel" src="../reactjs/tablePagination.js"></script>
-<script type="text/babel" src="../reactjs/form.js"></script>
-<script type="text/babel" src="../reactjs/App.js"></script>
+<script type="text/babel" src="../reactjs/employeeTimeAdd.js"></script>
+
 <!--Load more JS-->
 <script type="text/javascript" src="../js/peter_report.js"></script>
 </body>
